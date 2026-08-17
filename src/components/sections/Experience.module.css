@@ -1,0 +1,128 @@
+/* À placer dans : src/components/sections/Experience.module.css */
+
+.title {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  margin-top: 12px;
+  margin-bottom: 48px;
+  max-width: 600px;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  gap: 20px;
+}
+
+.markerCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--border);
+  border: 2px solid var(--bg);
+  box-shadow: 0 0 0 2px var(--border);
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.dotCurrent {
+  background: var(--accent);
+  box-shadow: 0 0 0 2px var(--accent);
+}
+
+.line {
+  width: 2px;
+  flex: 1;
+  background: var(--border);
+  margin: 4px 0;
+}
+
+.item:last-child .line {
+  display: none;
+}
+
+.card {
+  padding-bottom: 40px;
+  background: none;
+  border: none;
+  text-align: left;
+  font-family: inherit;
+  color: var(--text);
+  cursor: pointer;
+  width: 100%;
+  display: block;
+}
+
+.more {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.82rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.cardHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.role {
+  font-size: 1.1rem;
+}
+
+.company {
+  color: var(--accent-warm);
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.period {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.badge {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  background: rgba(0, 217, 255, 0.12);
+  color: var(--accent);
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+.points {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  padding-left: 18px;
+}
+
+.points li {
+  list-style: disc;
+}
+
+@media (min-width: 700px) {
+  .cardHeader {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+

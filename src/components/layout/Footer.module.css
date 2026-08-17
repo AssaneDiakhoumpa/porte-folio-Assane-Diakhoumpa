@@ -1,0 +1,59 @@
+/* À placer dans : src/components/layout/Footer.module.css */
+
+.footer {
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+  margin-top: 96px;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-top: 48px;
+  padding-bottom: 32px;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.tagline {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-size: 0.9rem;
+}
+
+.links a {
+  color: var(--text-muted);
+  transition: color 0.2s ease;
+}
+
+.links a:hover {
+  color: var(--accent);
+}
+
+.bottom {
+  border-top: 1px solid var(--border);
+  padding: 16px 24px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+@media (min-width: 700px) {
+  .inner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+

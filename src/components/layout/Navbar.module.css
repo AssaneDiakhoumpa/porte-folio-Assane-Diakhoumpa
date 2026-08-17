@@ -1,0 +1,88 @@
+/* À placer dans : src/components/layout/Navbar.module.css */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(10, 17, 40, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.logo span {
+  color: var(--accent);
+}
+
+.desktopNav {
+  display: none;
+  gap: 28px;
+}
+
+.desktopNav a {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  transition: color 0.2s ease;
+}
+
+.desktopNav a:hover {
+  color: var(--accent);
+}
+
+.cta {
+  display: none;
+}
+
+.burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+}
+
+.burger span {
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+}
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px 24px 28px;
+  border-top: 1px solid var(--border);
+}
+
+.mobileNav a {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+@media (min-width: 900px) {
+  .desktopNav {
+    display: flex;
+  }
+  .cta {
+    display: inline-flex;
+  }
+  .burger {
+    display: none;
+  }
+}
