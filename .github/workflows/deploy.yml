@@ -42,6 +42,9 @@ jobs:
 
       - name: Installer Vercel CLI
         run: npm install --global vercel@latest
+      
+      - name: Nettoyer la configuration Vercel
+        run: rm -rf .vercel
 
       - name: Récupérer l'environnement Vercel
         run: vercel pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }}
@@ -92,4 +95,3 @@ jobs:
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 
 
-          
